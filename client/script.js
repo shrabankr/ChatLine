@@ -16,7 +16,7 @@ function loader(element) {
 
     // If the loading indicator has reached three dots, reset it
     if (element.textContent === '....') {
-      element.textContent = '';
+        element.textContent = '';
     }
   }, 300);
 }
@@ -64,7 +64,7 @@ function chatStripe(isAi, value, uniqueId) {
   )
 }
 
-const handleSubmit =async (e) => {
+const handleSubmit = async (e) => {
   e.preventDefault();
 
   const data = new FormData(form);
@@ -98,7 +98,7 @@ const handleSubmit =async (e) => {
     body: JSON.stringify({
       prompt: data.get('prompt')
     })
-  })
+  });
 
   clearInterval(loadInterval);
   messageDiv.innerHTML = " ";
